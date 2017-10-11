@@ -28,7 +28,8 @@ int			is_local_file_dir(t_pipe *pipe_node, struct stat *stat_f)
 		}
 		ft_strdel(&full_path);
 	}
-	return (0);
+	pipe_node->cmd_full_path = ft_strdup(pipe_node->arg[0]);
+	return (1);
 }
 
 static char	*get_path(char *path, char *arg)
