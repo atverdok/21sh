@@ -52,7 +52,6 @@ t_pipe	*make_pipe(t_pipe *pipe_node, char **env)
 		}
 		else
 		{
-			wait(NULL);
 			dup2(pd[0], 0);
 			close(pd[1]);
 			close(pd[0]);
